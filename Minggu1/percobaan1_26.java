@@ -1,7 +1,7 @@
-package JOBSHEET1;
+package Minggu1;
 
 import java.util.Scanner;
-public class percobaan_26 {
+public class percobaan1_26 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
