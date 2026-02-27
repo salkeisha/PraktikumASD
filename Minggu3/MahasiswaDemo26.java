@@ -72,5 +72,7 @@ public class MahasiswaDemo26 {
         // System.out.println("KELAS   : " + arrayOfMahasiswa26[2].kelas);
         // System.out.println("IPK     : " + arrayOfMahasiswa26[2].ipk);
         // System.out.println("-----------------------------------------");
+
+        sc.close();
     }
 }
