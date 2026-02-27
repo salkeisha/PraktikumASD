@@ -27,11 +27,14 @@ public class MahasiswaDemo26 {
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Data Mahasiswa ke-" + (i + 1));
-            System.out.println("NIM     : " + arrayOfMahasiswa26[i].nim);
-            System.out.println("NAMA    : " + arrayOfMahasiswa26[i].nama);
-            System.out.println("KELAS   : " + arrayOfMahasiswa26[i].kelas);
-            System.out.println("IPK     : " + arrayOfMahasiswa26[i].ipk);
+            //Modifikasi pada percobaan kedua
+            arrayOfMahasiswa26[i].cetakInfo();
             System.out.println("-----------------------------------------");
+            // System.out.println("NIM     : " + arrayOfMahasiswa26[i].nim);
+            // System.out.println("NAMA    : " + arrayOfMahasiswa26[i].nama);
+            // System.out.println("KELAS   : " + arrayOfMahasiswa26[i].kelas);
+            // System.out.println("IPK     : " + arrayOfMahasiswa26[i].ipk);
+            // System.out.println("-----------------------------------------");
         }
 
         // Percobaan 1
