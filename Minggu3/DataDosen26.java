@@ -58,7 +58,49 @@ public class DataDosen26 {
     }
 
     void infoDosenPalingTua(Dosen26[] arrayOfDosen26) {
-        
+        Dosen26 dosenPlgTua = arrayOfDosen26[0];
+        for (Dosen26 dosen : arrayOfDosen26) {
+            if (dosen.usia > dosenPlgTua.usia) {
+                dosenPlgTua = dosen;
+            }
+        }
+
+        String format = "%-2s %-10s %-22s %-15s %-4s\n";
+        String jk = "";
+        System.out.println("================= DATA DOSEN PALING TUA =================");
+        System.out.printf(format, "No", "Kode", "Nama", "Jenis Kelamin", "Usia");
+        for (Dosen26 dosen : arrayOfDosen26) {
+            if (dosenPlgTua.jenisKelamin == true) {
+                jk = "Wanita";
+            } else {
+                jk = "Pria";
+            }
+        }
+        System.out.printf(format, "1", dosenPlgTua.kode, dosenPlgTua.nama, jk, dosenPlgTua.usia);
+        System.out.println("----------------------------------------------");
+    }
+
+    void infoDosenPalingMuda(Dosen26[] arrayOfDosen26) {
+        Dosen26 dosenPlgMuda = arrayOfDosen26[0];
+        for (Dosen26 dosen : arrayOfDosen26) {
+            if (dosen.usia < dosenPlgMuda.usia) {
+                dosenPlgMuda = dosen;
+            }
+        }
+        String format = "%-2s %-10s %-22s %-15s %-4s\n";
+        String jk = "";
+        System.out.println("================= DATA DOSEN PALING MUDA =================");
+        System.out.printf(format, "No", "Kode", "Nama", "Jenis Kelamin", "Usia");
+        for (Dosen26 dosen : arrayOfDosen26) {
+            if (dosenPlgMuda.jenisKelamin == true) {
+                jk = "Wanita";
+            } else {
+                jk = "Pria";
+            }
+        }
+        System.out.printf(format, "1", dosenPlgMuda.kode, dosenPlgMuda.nama, jk, dosenPlgMuda.usia);
+        System.out.println("----------------------------------------------");
+
     }
     
 }

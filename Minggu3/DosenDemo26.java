@@ -53,6 +53,8 @@ public class DosenDemo26 {
         dataDosen.dataSemuaDosen(arrayDosen26);
         dataDosen.jumlahDosenPerJenisKelamin(arrayDosen26);
         dataDosen.rerataUsiaDosenPerjenisKelamin(arrayDosen26);
+        dataDosen.infoDosenPalingTua(arrayDosen26);
+        dataDosen.infoDosenPalingMuda(arrayDosen26);
 
         sc.close();
         sc2.close();
