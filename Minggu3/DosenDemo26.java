@@ -48,6 +48,12 @@ public class DosenDemo26 {
 
             nomor++;
         }
+        
+        DataDosen26 dataDosen = new DataDosen26();
+        dataDosen.dataSemuaDosen(arrayDosen26);
+        dataDosen.jumlahDosenPerJenisKelamin(arrayDosen26);
+        dataDosen.rerataUsiaDosenPerjenisKelamin(arrayDosen26);
+
         sc.close();
         sc2.close();
 
