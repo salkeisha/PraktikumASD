@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MahasiswaDemo26 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
         Scanner sc2 = new Scanner(System.in);
         MahasiswaBerprestasi26 list = new MahasiswaBerprestasi26();
 
@@ -13,15 +13,16 @@ public class MahasiswaDemo26 {
 
         // Setekah dimodifikasi
         for (int i = 0; i < 5; i++) {
-            System.out.print("Masukkan NIM mahasiswa : ");
-            nim = sc.nextLine();
-            System.out.print("Masukkan nama mahasiswa : ");
-            nama = sc.nextLine();
-            sc.nextLine();
-            System.out.print("Masukkan kelas mahasiswa : ");
-            kelas = sc.nextLine();
-            System.out.print("Masukkan IPK mahasiswa : ");
+            System.out.println("Masukkan Data Mahasiswa ke-" + (i+1));
+            System.out.print("NIM    : ");
+            nim = sc2.nextLine();
+            System.out.print("Nama   : ");
+            nama = sc2.nextLine();
+            System.out.print("Kelas  : ");
+            kelas = sc2.nextLine();
+            System.out.print("IPK    : ");
             ipk = sc2.nextDouble();
+            sc2.nextLine();
 
             Mahasiswa26 m = new Mahasiswa26(nim, nama, kelas, ipk);
 
@@ -45,8 +46,12 @@ public class MahasiswaDemo26 {
         System.out.println("Data mahasiswa sebelum sorting: ");
         list.tampil();
 
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        list.bubbleSort();
+        // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
+        // list.bubbleSort();
+        // list.tampil();
+
+        System.out.println("Data yang sudah terurut menggunakan Selection Sort (ASC) : ");
+        list.selectionSort();
         list.tampil();
     }
 }
