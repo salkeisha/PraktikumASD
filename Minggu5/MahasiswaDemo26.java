@@ -57,5 +57,7 @@ public class MahasiswaDemo26 {
         System.out.println("Data yang sudah terurut menggunakan Insertion Sort (ASC) : ");
         list.insertionSort();
         list.tampil();
+
+        sc2.close();
     }
 }
