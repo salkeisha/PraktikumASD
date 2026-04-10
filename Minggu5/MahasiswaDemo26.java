@@ -8,8 +8,8 @@ public class MahasiswaDemo26 {
         Scanner sc2 = new Scanner(System.in);
         MahasiswaBerprestasi26 list = new MahasiswaBerprestasi26();
 
-        String nama, kelas, nim;
-        double ipk;
+        // String nama, kelas, nim;
+        // double ipk;
 
         // Setekah dimodifikasi
         // for (int i = 0; i < 5; i++) {
