@@ -1,8 +1,12 @@
 package Minggu6;
 
 public class MahasiswaBerprestasi26 {
-    Mahasiswa26 [] listMhs = new Mahasiswa26 [5];
+    Mahasiswa26 [] listMhs;
     int idx;
+
+    public MahasiswaBerprestasi26(int jumMhs) {
+        listMhs = new Mahasiswa26[jumMhs];
+    }
 
     void tambah(Mahasiswa26 mhs) {
         if (idx<listMhs.length) {

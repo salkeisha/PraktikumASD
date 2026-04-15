@@ -6,9 +6,12 @@ public class MahasiswaDemo26 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        MahasiswaBerprestasi26 list = new MahasiswaBerprestasi26();
 
-        int jumMhs = 5;
+        // Modifikasi percobaan 2 nomor 7
+        System.out.print("Masukkan jumlah mahasiswa yang ingin diinput : ");
+        int jumMhs = sc.nextInt();
+        sc.nextLine();
+        MahasiswaBerprestasi26 list = new MahasiswaBerprestasi26(jumMhs);
 
         for (int i = 0; i < jumMhs; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
