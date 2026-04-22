@@ -15,18 +15,28 @@ public class Peminjaman26 {
         hitungDenda();
     }
 
+    // Modifikasi A2
+    String kategoriDenda;
     void hitungDenda() {
         if (lamaPinjam > batasPinjam) {
             terlambat = lamaPinjam - batasPinjam;
             denda = terlambat*2000;
+            if (denda > 10000) {
+                kategoriDenda = "Berat";
+            } else if (denda > 5000 && denda <= 10000) {
+                kategoriDenda = "Sedang";
+            } else if (denda <= 5000) {
+                kategoriDenda = "Ringan";
+            }
         } else {
             terlambat = 0;
             denda = 0;
+            kategoriDenda = "Tidak ada Denda";
         }
     }
 
     void tampilPeminjaman() {
-        System.out.println(mhs.nama + " | " + mhs.prodi + " | Lama: " + lamaPinjam + " | Terlambat: " + terlambat + " | Denda: " + denda);
+        System.out.println(mhs.nama + " | " + mhs.prodi + " | Lama: " + lamaPinjam + " | Terlambat: " + terlambat + " | Denda: " + denda + " | Kategori Denda: " + kategoriDenda);
     }
 
 }

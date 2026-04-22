@@ -4,6 +4,7 @@ public class Buku26 {
     String kodeBuku;
     String judul;
     int tahunTerbit;
+    int index;
     
     Buku26(String kode, String jdl, int tahun) {
         kodeBuku = kode;

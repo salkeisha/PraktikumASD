@@ -4,6 +4,11 @@ public class SistemPeminjaman26 {
     Peminjaman26[] listPeminjaman26 = new Peminjaman26[5];
     int index;
 
+    // SistemPeminjaman26(int kapasitas) {
+    //     listPeminjaman26 = new Peminjaman26[kapasitas];
+    //     index = 0;
+    // }
+
     void tambahData(Peminjaman26 p) {
         if (index < listPeminjaman26.length) {
             listPeminjaman26[index] = p;
@@ -32,6 +37,22 @@ public class SistemPeminjaman26 {
         }
     }
 
+    // Modifikasi C2
+    void lamaPinjamMhs(String NIM) {
+        boolean ditemukan = false;
+        int totalPeminjamanMhs = 0;
+
+        for (int i = 0; i < listPeminjaman26.length; i++) {
+            if (listPeminjaman26[i].mhs.nim.equalsIgnoreCase(NIM)) {
+                totalPeminjamanMhs += listPeminjaman26[i].lamaPinjam;
+            }
+        }
+
+        if (!ditemukan) {
+                System.out.println("Data lama peminjaman dengan NIM " + NIM + " tidak ditemukan");
+        }
+    }
+
     void cariBerdasarNIM(String cari) {
         boolean ditemukan = false;
 
@@ -45,6 +66,24 @@ public class SistemPeminjaman26 {
         
         if (!ditemukan) {
                 System.out.println("Data peminjaman dengan NIM " + cari + " tidak ditemukan");
+        }
+
+    }
+
+    //MODIFIKASI B2
+    void cariBerdasarJudul(Buku26[] arrayBuku26, String cari2) {
+        boolean ditemukan = false;
+
+        for (int i = 0; i < 4; i++) {
+            if (arrayBuku26[i].judul.equalsIgnoreCase(cari2)) {
+                arrayBuku26[i].tampilBuku();
+                ditemukan = true;
+            }
+            
+        }
+        
+        if (!ditemukan) {
+                System.out.println("Data peminjaman dengan Bukui " + cari2 + " tidak ditemukan");
         }
 
     }

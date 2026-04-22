@@ -33,6 +33,7 @@ public class CaseMethodDemo26 {
             System.out.println("3. Tampilkan Peminjamana");
             System.out.println("4. Urutkan Berdasarkan Denda");
             System.out.println("5. Cari berdasarkan NIM");
+            System.out.println("6. Cari berdasarkan Judul Buku");
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             menu = sc.nextInt();
@@ -61,9 +62,15 @@ public class CaseMethodDemo26 {
                     sistem.tampilkanDataDenda();
                     break;
                 case 5:
-                    System.out.print("Masukkan NIM: ");
+                    System.out.print("Masukkan Judul NIM: ");
                     String cari = sc.nextLine();
                     sistem.cariBerdasarNIM(cari);
+                    break;
+                 // MODIFIKASI B2
+                case 6:
+                    System.out.println("Masukkan judul Buku: ");
+                    String cari2 = sc.nextLine();
+                    sistem.cariBerdasarJudul(arrayBuku26, cari2);
                     break;
                 case 0:
                     System.out.println("Terimakasih sudah menggunakan layanan kami!");
