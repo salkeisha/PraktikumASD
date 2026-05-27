@@ -78,4 +78,89 @@ public class SingleLinkedList26 {
             }
         }
     }
+
+    //Praktikum 2
+    void getData(int index) {
+        Node26 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        tmp.data.tampilInformasi();
+    }
+
+    int indexOf(String key) {
+        Node26 tmp = head;
+        int index = 0;
+        while (tmp != null && !tmp.data.nama.equalsIgnoreCase(key)) {
+            tmp = tmp.next;
+            index++;
+        }
+
+        if (tmp == null) {
+            return -1;
+        } else {
+            return index;
+        }
+    }
+
+    void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong, tidak dapat dihapus.");
+        } else if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+        }
+    }
+
+    void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong, tidak dapat dihapus.");
+        } else if ( head == tail ) {
+            head = tail = null;
+        } else {
+            Node26 tmp = head;
+            while (tmp.next != tail) {
+                tmp = tmp.next;
+            }
+            tmp.next = null;
+            tail = tmp;
+        }
+    }
+
+    void remove(String key) {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong, tidak dapat dihapus.");
+        } else {
+            Node26 tmp = head;
+            while (tmp != null) {
+                if ((tmp.data.nama.equalsIgnoreCase(key)) && (tmp == head)) {
+                    this.removeFirst();
+                    break;
+                } else if (tmp.data.nama.equalsIgnoreCase(key)) {
+                    tmp.next = tmp.next.next;
+                    if (tmp.next == null) {
+                        tail = tmp;
+                    }
+                    break;
+                }
+                tmp = tmp.next;
+            }
+        }
+    }
+
+    void removeAt(int Index) {
+        if (Index == 0) {
+            removeFirst();
+        } else {
+            Node26 tmp = head;
+            for (int i = 0; i < Index; i++) {
+                tmp = tmp.next;
+            }
+            tmp.next = tmp.next.next;
+            if (tmp.next == null) {
+                tail = tmp;
+            }
+        }
+    }
 }
