@@ -74,6 +74,20 @@ public class DoubleLinkedListed26 {
         }
     }
 
+    // Modifikasi penambahan method
+    void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+
+        Node26 current = tail;
+        while (current != null) {
+            current.data.tampil();
+            current = current.prev;
+        }
+    }
+
     void removeFirst() {
         
     }
